@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rincón Caribeño | El Estadero Cubierto Más Grande</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA841B',
+                            hover: '#C5A028'
+                        },
+                        dark: {
+                            base: '#0A0A0A',
+                            card: '#121212',
+                            border: '#2A2212'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efecto de brillo dorado sutil */
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+        }
+        .gold-glow-hover:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+            border-color: #D4AF37 !important;
+        }
+        /* Personalización de barra de desplazamiento */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #AA841B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-dark-base text-gray-200 font-sans antialiased min-h-screen">
+
+    <!-- BARRA DE NAVEGACIÓN (HEADER) -->
+    <header class="fixed w-full top-0 z-50 bg-dark-base/95 backdrop-blur-md border-b border-dark-border transition-all duration-300">
+        <!-- El padding vertical py-4 (móvil) y md:py-5 (escritorio) da un espacio óptimo al logo de gran tamaño -->
+        <div class="max-w-7xl mx-auto px-6 py-4 md:py-5 flex justify-between items-center">
+            
+            <!-- Logotipo de la Empresa (Esquina Superior Izquierda) -->
+            <a href="#inicio" class="flex items-center">
+                <!-- Se ha definido una altura imponente de h-20 (80px) en móviles y md:h-24 (96px) en pantallas grandes -->
+                <img src="logo-rincon.png" 
+                     alt="Logotipo Rincón Caribeño" 
+                     class="h-20 md:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                     onerror="this.src='https://placehold.co/240x80/0A0A0A/D4AF37?text=Rinc%C3%B3n+Caribe%C3%B1o';">
+            </a>
+
+            <!-- Menú de Navegación de Escritorio -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Inicio</a>
+                <a href="#historia" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Historia</a>
+                <a href="#servicios" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Servicios</a>
+                <a href="#carta" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Bebidas</a>
+                <a href="#reservas" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Reservas</a>
+            </nav>
+
+            <!-- Botón de Acción Rápida (Escritorio) -->
+            <div class="hidden md:block">
+                <a href="#reservas" class="border border-gold text-gold hover:bg-gold hover:text-dark-base font-semibold px-6 py-2.5 rounded-full text-sm transition duration-300 gold-glow">
+                    Reservar Mesa
+                </a>
+            </div>
+
+            <!-- Botón de Menú Móvil -->
+            <button id="menuBtn" class="md:hidden text-gold focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobileMenu" class="hidden md:hidden bg-dark-base border-t border-dark-border px-6 py-6 space-y-4">
+            <a href="#inicio" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Inicio</a>
+            <a href="#historia" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Nuestra Historia</a>
+            <a href="#servicios" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios & VIP</a>
+            <a href="#carta" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Carta de Bebidas</a>
+            <a href="#reservas" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Reservar Ahora</a>
+            <a href="#reservas" class="block text-center bg-gold text-dark-base font-bold py-3 rounded-full transition duration-300">
+                Reservar por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN INICIO (HERO) -->
+    <!-- pt-28 (móvil) y md:pt-36 (escritorio) evita que la barra de navegación alta pise el contenido de inicio -->
+    <section id="inicio" class="relative min-h-screen flex flex-col justify-center bg-cover bg-center pt-28 md:pt-36" style="background-image: linear-gradient(to bottom, rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1920&q=80');">
+        <div class="max-w-6xl mx-auto px-6 w-full flex flex-col justify-between py-12 z-10 min-h-[calc(100vh-5rem)]">
+            
+            <!-- Contenido de Texto Principal -->
+            <div class="my-auto text-center max-w-4xl mx-auto py-6">
+                <!-- Distintivo Superior -->
+                <div class="inline-flex items-center space-x-2 border border-gold/30 bg-gold/10 px-4 py-1.5 rounded-full mb-6">
+                    <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">El Estadero de la Comunidad</span>
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+                    El estadero cubierto <br class="hidden md:inline"><span class="text-gold">más grande</span> de la ciudad
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Unión perfecta de tradición, el mejor ambiente del Caribe y tecnología de última generación. Un espacio sin restricciones para todo tipo de público.
+                </p>
+
+                <!-- Botones de Conversión (Llamativos e independientes) -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#reservas" class="w-full sm:w-auto bg-gold hover:bg-gold-hover text-dark-base font-bold px-8 py-4 rounded-xl text-base transition duration-300 gold-glow-hover flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Reservar Mesa VIP
+                    </a>
+                    <a href="#carta" class="w-full sm:w-auto border border-gray-400 hover:border-gold hover:text-gold font-bold px-8 py-4 rounded-xl text-base transition duration-300 flex items-center justify-center gap-2">
+                        Ver Menú de Bebidas
+                    </a>
+                </div>
+            </div>
+
+            <!-- Estadísticas en Grid (Fluyen naturalmente en el fondo) -->
+            <div class="w-full mt-8 hidden lg:block">
+                <div class="grid grid-cols-4 bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-2xl py-6 text-center gold-glow">
+                    <div class="border-r border-dark-border px-4">
+                        <p class="text-gold text-2xl font-bold">100%</p>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Cubierto y Seguro</p>
+                    </div>
+                    <div class="border-r border-dark-border px-4">
+                        <p class="text-gold text-2xl font-bold">VIP</p>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Zonas Privadas</p>
+                    </div>
+                    <div class="border-r border-dark-border px-4">
+                        <p class="text-gold text-2xl font-bold">HD</p>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Pantallas Gigantes</p>
+                    </div>
+                    <div class="px-4">
+                        <p class="text-gold text-2xl font-bold">HI-FI</p>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Sonido Profesional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HISTORIA -->
+    <section id="historia" class="py-24 bg-dark-card border-y border-dark-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Lado de Texto -->
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Nuestros Orígenes</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-6">De un Sueño a la Grandeza</h2>
+                    <div class="w-16 h-1 bg-gold mb-6"></div>
+                    
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Nacido de la visión audaz de un joven emprendedor, <span class="text-gold font-semibold">Rincón Caribeño</span> se propuso revolucionar por completo el concepto de los estaderos locales. Iniciamos como un proyecto humilde, pero lleno de energía y deseos de servir.
+                    </p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Apostamos desde el primer día por lo mejor: tecnología de pantallas gigantes, audio nítido de alta gama y, sobre todo, una hospitalidad genuina y transparente. La comunidad nos acogió con un cariño masivo con el cual estamos profundamente agradecidos. 
+                    </p>
+                    <p class="text-gray-300 font-semibold italic text-gold-light border-l-4 border-gold pl-4 py-2">
+                        "Nuestra gran meta es consolidarnos como el estadero cubierto más sofisticado de la región, sin perder la calidez y accesibilidad que nos caracterizan."
+                    </p>
+                </div>
+
+                <!-- Imagen Representativa -->
+                <div class="relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-dark-border gold-glow">
+                        <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=1000&q=80" alt="Ambiente de Club y Música" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-dark-base border border-gold/40 p-6 rounded-2xl hidden sm:block max-w-[240px]">
+                        <p class="text-gold font-serif text-3xl font-bold mb-1">100%</p>
+                        <p class="text-xs font-medium text-gray-400 uppercase tracking-widest">Compromiso con el servicio personalizado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="py-24 bg-dark-base">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">¿Por qué preferirnos?</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Servicios &amp; Diferenciales</h2>
+                <p class="text-gray-400">Diseñado meticulosamente para garantizar que tu estadía, ya sea con amigos, familiares o en eventos públicos y privados, sea inolvidable.</p>
+            </div>
+
+            <!-- Grilla de Servicios -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Atención Acompañada</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Olvídate de las esperas. En Rincón Caribeño contarás con un servicio de atención continuo y personalizado guiado por profesionales.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Zonas VIP Exclusivas</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Zonas preferenciales diseñadas para grupos que buscan una experiencia superior, mejor acústica y vista directa a nuestras pantallas gigantes.
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
+                        <i class="fa-solid fa-car-tunnel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Parqueadero Propio</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Llega con total tranquilidad. Disponemos de un área de parqueadero seguro y vigilado para que solo te preocupes de pasarla bien.
+                    </p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
+                        <i class="fa-solid fa-compact-disc"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ambiente Dual</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        ¿Bailar a lo grande o conversar y relajarse? Nuestros amplios espacios techados te permiten transicionar libremente entre ambos mundos.
+                    </p>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Precios Económicos</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Ofrecemos la mejor relación calidad-precio del sector. Bebidas selectas ajustadas al presupuesto de todos nuestros clientes.
+                    </p>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Eventos Privados</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Alquilamos nuestro imponente espacio para celebraciones empresariales, familiares o lanzamientos artísticos privados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CARTA DE BEBIDAS -->
+    <section id="carta" class="py-24 bg-dark-card border-y border-dark-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Selección Especial</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Nuestra Carta de Bebidas</h2>
+                <p class="text-gray-400">Variedad de licores nacionales, importados, cervezas heladas y cócteles tropicales con precios imbatibles.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Licores Clásicos -->
+                <div class="space-y-6">
+                    <h3 class="font-serif text-2xl text-gold border-b border-dark-border pb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-wine-glass"></i> Licores Clásicos
+                    </h3>
+                    
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Aguardiente Antioqueño (Media)</h4>
+                            <p class="text-sm text-gray-400">El rey de la fiesta, servido helado.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">Económico</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Ron Medellín Añejo 3 Años (Botella)</h4>
+                            <p class="text-sm text-gray-400">Sabor tradicional de la mejor caña.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">Económico</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Aguardiente Tapa Azul (Botella)</h4>
+                            <p class="text-sm text-gray-400">Suave, sin azúcar para extender la noche.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">Económico</span>
+                    </div>
+                </div>
+
+                <!-- Cervezas y Cócteles -->
+                <div class="space-y-6">
+                    <h3 class="font-serif text-2xl text-gold border-b border-dark-border pb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-beer-mug-empty"></i> Cervezas y Cócteles
+                    </h3>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Cerveza Águila / Club Colombia</h4>
+                            <p class="text-sm text-gray-400">Nacionales bien heladas en balde o individuales.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">Precio Especial</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Corona Extra (Importada)</h4>
+                            <p class="text-sm text-gray-400">Refrescante toque de limón caribeño.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">Económico</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Cócteles &amp; Sin Alcohol</h4>
+                            <p class="text-sm text-gray-400">Amplia gama de licores mezclados y jugos naturales.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">Variedad</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center bg-dark-base border border-dark-border p-6 rounded-2xl max-w-2xl mx-auto">
+                <p class="text-sm text-gray-300">
+                    <i class="fa-solid fa-circle-info text-gold mr-2"></i>Ofrecemos opciones para todos los gustos y presupuestos con promociones especiales durante nuestros eventos quincenales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE RESERVA INTERACTIVO -->
+    <section id="reservas" class="py-24 bg-dark-base">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Reserva Online Instantánea</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Asegura tu Mesa</h2>
+                <p class="text-gray-400">Completa el siguiente formulario para generar tu reserva directa por WhatsApp. Nuestro equipo confirmará tu solicitud en minutos.</p>
+            </div>
+
+            <!-- Formulario -->
+            <div class="bg-dark-card border border-dark-border p-8 md:p-12 rounded-3xl gold-glow">
+                <form id="reservaForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Nombre -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <!-- Cedula -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="cedula">Cédula de Ciudadanía *</label>
+                            <input type="text" id="cedula" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. 1040330222">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Telefono -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="telefono">Número de Teléfono *</label>
+                            <input type="tel" id="telefono" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. 3001234567">
+                        </div>
+                        <!-- Correo -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="correo">Correo Electrónico *</label>
+                            <input type="email" id="correo" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. juan@correo.com">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Fecha -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="fecha">Fecha de Visita *</label>
+                            <input type="date" id="fecha" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300">
+                        </div>
+                        <!-- Zona -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="zona">Zona del Estadero *</label>
+                            <select id="zona" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300">
+                                <option value="Zona General">Zona General - Mesas cómodas frente al escenario</option>
+                                <option value="Zona VIP">Zona VIP Preferencial - Sofás y vista superior</option>
+                                <option value="Evento Privado">Evento Privado - Alquiler completo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Envíos -->
+                    <div class="pt-4 flex flex-col md:flex-row gap-4">
+                        <button type="submit" class="flex-1 bg-gold hover:bg-gold-hover text-dark-base font-bold py-4 rounded-xl text-center transition duration-300 flex items-center justify-center gap-3 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Reserva por WhatsApp
+                        </button>
+                        <a href="tel:+573000000000" class="border border-dark-border hover:border-gold hover:text-gold text-center py-4 px-6 rounded-xl font-semibold transition duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i> Reservar por Llamada
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER Y DATOS DE CONTACTO -->
+    <footer class="bg-dark-card border-t border-dark-border pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 mb-12">
+            <!-- Información Comercial -->
+            <div class="space-y-4">
+                <span class="font-serif text-3xl font-bold text-gold tracking-wider">Rincón Caribeño</span>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Un espacio libre de restricciones pensado para unir a toda la comunidad al ritmo de la música de la mejor calidad.
+                </p>
+                <!-- Redes Sociales -->
+                <div class="flex space-x-4 pt-2">
+                    <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full border border-dark-border flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition duration-300">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full border border-dark-border flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition duration-300">
+                        <i class="fa-brands fa-facebook-f text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Horarios -->
+            <div class="space-y-4">
+                <h4 class="text-lg font-bold text-white font-serif">Horarios &amp; Eventos</h4>
+                <div class="w-10 h-0.5 bg-gold"></div>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="flex justify-between">
+                        <span>Eventos Públicos / Privados:</span>
+                        <span class="text-white font-semibold">Abierto todos los días</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Frecuencia Eventos Especiales:</span>
+                        <span class="text-white">Cada 15 - 20 Días</span>
+                    </li>
+                    <li class="text-gold-light mt-4 text-xs tracking-wider uppercase font-semibold">
+                        <i class="fa-solid fa-circle-check"></i> Parqueadero Vigilado Disponible
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contacto Directo -->
+            <div class="space-y-4">
+                <h4 class="text-lg font-bold text-white font-serif">Contacto Directo</h4>
+                <div class="w-10 h-0.5 bg-gold"></div>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-gold"></i>
+                        <span>Dirección Principal del Estadero</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-gold"></i>
+                        <a href="tel:+573000000000" class="hover:text-gold transition">+57 300 000 0000</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-gold"></i>
+                        <span>contacto@rinconcaribeno.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Derechos de Autor -->
+        <div class="max-w-7xl mx-auto px-6 border-t border-dark-border pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+            <p>&copy; 2026 Rincón Caribeño. Todos los derechos reservados.</p>
+            <p>Hecho con pasión en Colombia</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS DE INTERACTIVIDAD -->
+    <script>
+        // Lógica de apertura/cierre de menú móvil
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark';
+            }
+        });
+
+        // Cerrar menú al presionar un enlace
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars';
+            });
+        });
+
+        // Captura de envío de reservas y redirección formateada a WhatsApp
+        const reservaForm = document.getElementById('reservaForm');
+
+        reservaForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Capturar variables
+            const nombre = document.getElementById('nombre').value;
+            const cedula = document.getElementById('cedula').value;
+            const telefono = document.getElementById('telefono').value;
+            const correo = document.getElementById('correo').value;
+            const fecha = document.getElementById('fecha').value;
+            const zona = document.getElementById('zona').value;
+
+            // Formulación del texto predeterminado ordenado
+            const mensaje = `¡Hola Rincón Caribeño! Deseo solicitar una reserva formal para:\n\n` +
+                            `*• Nombre completo:* ${nombre}\n` +
+                            `*• Cédula:* ${cedula}\n` +
+                            `*• Teléfono:* ${telefono}\n` +
+                            `*• Correo:* ${correo}\n` +
+                            `*• Fecha de visita:* ${fecha}\n` +
+                            `*• Zona elegida:* ${zona}\n\n` +
+                            `_Quedo atento a la confirmación de la disponibilidad de la mesa._`;
+
+            // Número comercial oficial del estadero (Reemplaza este número ficticio por tu número real de atención)
+            const numeroEstadero = '573000000000'; 
+            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroEstadero}&text=${encodeURIComponent(mensaje)}`;
+
+            // Abrir API de WhatsApp
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+</body>
+</html>
