@@ -66,20 +66,18 @@
 
     <!-- BARRA DE NAVEGACIÓN (HEADER) -->
     <header class="fixed w-full top-0 z-50 bg-dark-base/95 backdrop-blur-md border-b border-dark-border transition-all duration-300">
-        <!-- El padding vertical py-4 (móvil) y md:py-5 (escritorio) da un espacio óptimo al logo de gran tamaño -->
-        <div class="max-w-7xl mx-auto px-6 py-4 md:py-5 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-1 flex justify-between items-center">
             
-            <!-- Logotipo de la Empresa (Esquina Superior Izquierda) -->
-            <a href="#inicio" class="flex items-center">
-                <!-- Se ha definido una altura imponente de h-20 (80px) en móviles y md:h-24 (96px) en pantallas grandes -->
+            <!-- Logotipo: Un poco menos ancho (w-72 md:w-80) pero más alto (h-24 md:h-28) -->
+            <a href="#inicio" class="flex items-center w-72 md:w-80 py-1">
                 <img src="logo-rincon.png" 
                      alt="Logotipo Rincón Caribeño" 
-                     class="h-20 md:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105"
-                     onerror="this.src='https://placehold.co/240x80/0A0A0A/D4AF37?text=Rinc%C3%B3n+Caribe%C3%B1o';">
+                     class="w-full h-24 md:h-28 object-fill transition-transform duration-300 hover:scale-105"
+                     onerror="this.src='https://placehold.co/350x130/0A0A0A/D4AF37?text=Rinc%C3%B3n+Caribe%C3%B1o';">
             </a>
 
             <!-- Menú de Navegación de Escritorio -->
-            <nav class="hidden md:flex items-center space-x-8">
+            <nav class="hidden lg:flex items-center space-x-8">
                 <a href="#inicio" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Inicio</a>
                 <a href="#historia" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Historia</a>
                 <a href="#servicios" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Servicios</a>
@@ -95,27 +93,27 @@
             </div>
 
             <!-- Botón de Menú Móvil -->
-            <button id="menuBtn" class="md:hidden text-gold focus:outline-none text-2xl">
+            <button id="menuBtn" class="lg:hidden text-gold focus:outline-none text-2xl">
                 <i class="fa-solid fa-bars" id="menuIcon"></i>
             </button>
         </div>
 
         <!-- Menú Desplegable Móvil -->
-        <div id="mobileMenu" class="hidden md:hidden bg-dark-base border-t border-dark-border px-6 py-6 space-y-4">
+        <div id="mobileMenu" class="hidden lg:hidden bg-dark-base border-t border-dark-border px-6 py-6 space-y-4">
             <a href="#inicio" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Inicio</a>
             <a href="#historia" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Nuestra Historia</a>
-            <a href="#servicios" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios & VIP</a>
+            <a href="#servicios" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios &amp; VIP</a>
             <a href="#carta" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Carta de Bebidas</a>
             <a href="#reservas" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Reservar Ahora</a>
-            <a href="#reservas" class="block text-center bg-gold text-dark-base font-bold py-3 rounded-full transition duration-300">
+            <!-- Botón directo de Reserva Móvil vinculado a WhatsApp -->
+            <a href="https://wa.me/573016976997?text=Hola,%20quiero%20solicitar%20información%20para%20una%20reserva%20en%20Rincón%20Caribeño." target="_blank" class="block text-center bg-gold text-dark-base font-bold py-3 rounded-full transition duration-300">
                 Reservar por WhatsApp
             </a>
         </div>
     </header>
 
     <!-- SECCIÓN INICIO (HERO) -->
-    <!-- pt-28 (móvil) y md:pt-36 (escritorio) evita que la barra de navegación alta pise el contenido de inicio -->
-    <section id="inicio" class="relative min-h-screen flex flex-col justify-center bg-cover bg-center pt-28 md:pt-36" style="background-image: linear-gradient(to bottom, rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1920&q=80');">
+    <section id="inicio" class="relative min-h-screen flex flex-col justify-center bg-cover bg-center pt-32 md:pt-40" style="background-image: linear-gradient(to bottom, rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1920&q=80');">
         <div class="max-w-6xl mx-auto px-6 w-full flex flex-col justify-between py-12 z-10 min-h-[calc(100vh-5rem)]">
             
             <!-- Contenido de Texto Principal -->
@@ -134,7 +132,7 @@
                     Unión perfecta de tradición, el mejor ambiente del Caribe y tecnología de última generación. Un espacio sin restricciones para todo tipo de público.
                 </p>
 
-                <!-- Botones de Conversión (Llamativos e independientes) -->
+                <!-- Botones de Conversión -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#reservas" class="w-full sm:w-auto bg-gold hover:bg-gold-hover text-dark-base font-bold px-8 py-4 rounded-xl text-base transition duration-300 gold-glow-hover flex items-center justify-center gap-2">
                         <i class="fa-solid fa-calendar-check"></i> Reservar Mesa VIP
@@ -145,7 +143,7 @@
                 </div>
             </div>
 
-            <!-- Estadísticas en Grid (Fluyen naturalmente en el fondo) -->
+            <!-- Estadísticas en Grid -->
             <div class="w-full mt-8 hidden lg:block">
                 <div class="grid grid-cols-4 bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-2xl py-6 text-center gold-glow">
                     <div class="border-r border-dark-border px-4">
@@ -170,7 +168,7 @@
     </section>
 
     <!-- SECCIÓN HISTORIA -->
-    <section id="historia" class="py-24 bg-dark-card border-y border-dark-border">
+    <section id="historia" class="py-24 bg-dark-card border-y border-dark-border scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Lado de Texto -->
@@ -180,7 +178,7 @@
                     <div class="w-16 h-1 bg-gold mb-6"></div>
                     
                     <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-                        Nacido de la visión audaz de un joven emprendedor, <span class="text-gold font-semibold">Rincón Caribeño</span> se propuso revolucionar por completo el concepto de los estaderos locales. Iniciamos como un proyecto humilde, pero lleno de energía y deseos de servir.
+                        Nacidos de la visión audaz de un joven emprendedor, Rincón Caribeño se propuso revolucionar por completo el concepto de los estaderos locales. Iniciamos como un proyecto humilde, pero lleno de energía y deseos de servir.
                     </p>
                     <p class="text-gray-400 mb-6 leading-relaxed">
                         Apostamos desde el primer día por lo mejor: tecnología de pantallas gigantes, audio nítido de alta gama y, sobre todo, una hospitalidad genuina y transparente. La comunidad nos acogió con un cariño masivo con el cual estamos profundamente agradecidos. 
@@ -205,7 +203,7 @@
     </section>
 
     <!-- SECCIÓN SERVICIOS -->
-    <section id="servicios" class="py-24 bg-dark-base">
+    <section id="servicios" class="py-24 bg-dark-base scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">¿Por qué preferirnos?</span>
@@ -285,7 +283,7 @@
     </section>
 
     <!-- SECCIÓN CARTA DE BEBIDAS -->
-    <section id="carta" class="py-24 bg-dark-card border-y border-dark-border">
+    <section id="carta" class="py-24 bg-dark-card border-y border-dark-border scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Selección Especial</span>
@@ -366,7 +364,7 @@
     </section>
 
     <!-- FORMULARIO DE RESERVA INTERACTIVO -->
-    <section id="reservas" class="py-24 bg-dark-base">
+    <section id="reservas" class="py-24 bg-dark-base scroll-mt-20">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Reserva Online Instantánea</span>
@@ -420,12 +418,13 @@
                         </div>
                     </div>
 
-                    <!-- Botones de Envíos -->
+                    <!-- Botones de Envíos actualizados -->
                     <div class="pt-4 flex flex-col md:flex-row gap-4">
                         <button type="submit" class="flex-1 bg-gold hover:bg-gold-hover text-dark-base font-bold py-4 rounded-xl text-center transition duration-300 flex items-center justify-center gap-3 shadow-lg">
                             <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Reserva por WhatsApp
                         </button>
-                        <a href="tel:+573000000000" class="border border-dark-border hover:border-gold hover:text-gold text-center py-4 px-6 rounded-xl font-semibold transition duration-300 flex items-center justify-center gap-2">
+                        <!-- Enlace de llamada directo al número +57 301 6976997 -->
+                        <a href="tel:+573016976997" class="border border-dark-border hover:border-gold hover:text-gold text-center py-4 px-6 rounded-xl font-semibold transition duration-300 flex items-center justify-center gap-2">
                             <i class="fa-solid fa-phone"></i> Reservar por Llamada
                         </a>
                     </div>
@@ -484,7 +483,7 @@
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-solid fa-phone text-gold"></i>
-                        <a href="tel:+573000000000" class="hover:text-gold transition">+57 300 000 0000</a>
+                        <a href="tel:+573016976997" class="hover:text-gold transition">+57 301 697 6997</a>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-solid fa-envelope text-gold"></i>
@@ -517,7 +516,7 @@
             }
         });
 
-        // Cerrar menú al presionar un enlace
+        // Cerrar menú al presionar un enlace en móviles
         document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -525,13 +524,11 @@
             });
         });
 
-        // Captura de envío de reservas y redirección formateada a WhatsApp
-        const reservaForm = document.getElementById('reservaForm');
+        // Lógica de Captura del Formulario y Envió Automatizado a WhatsApp
+        document.getElementById('reservaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que la página se recargue
 
-        reservaForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Capturar variables
+            // Capturar los valores ingresados por el usuario
             const nombre = document.getElementById('nombre').value;
             const cedula = document.getElementById('cedula').value;
             const telefono = document.getElementById('telefono').value;
@@ -539,21 +536,22 @@
             const fecha = document.getElementById('fecha').value;
             const zona = document.getElementById('zona').value;
 
-            // Formulación del texto predeterminado ordenado
-            const mensaje = `¡Hola Rincón Caribeño! Deseo solicitar una reserva formal para:\n\n` +
-                            `*• Nombre completo:* ${nombre}\n` +
-                            `*• Cédula:* ${cedula}\n` +
-                            `*• Teléfono:* ${telefono}\n` +
-                            `*• Correo:* ${correo}\n` +
-                            `*• Fecha de visita:* ${fecha}\n` +
-                            `*• Zona elegida:* ${zona}\n\n` +
-                            `_Quedo atento a la confirmación de la disponibilidad de la mesa._`;
+            // Formatear el mensaje de texto para WhatsApp
+            const mensaje = `¡Hola, Rincón Caribeño! 👋%0A` +
+                            `Me gustaría solicitar una reserva. Aquí están mis datos:%0A%0A` +
+                            `*Nombre:* ${nombre}%0A` +
+                            `*Cédula:* ${cedula}%0A` +
+                            `*Teléfono:* ${telefono}%0A` +
+                            `*Correo:* ${correo}%0A` +
+                            `*Fecha de Visita:* ${fecha}%0A` +
+                            `*Zona elegida:* ${zona}%0A%0A` +
+                            `Quedo atento a su confirmación. ¡Muchas gracias!`;
 
-            // Número comercial oficial del estadero (Reemplaza este número ficticio por tu número real de atención)
-            const numeroEstadero = '573000000000'; 
-            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroEstadero}&text=${encodeURIComponent(mensaje)}`;
+            // Número telefónico configurado internacionalmente (+573016976997)
+            const numeroTelefono = "573016976997";
 
-            // Abrir API de WhatsApp
+            // Crear el enlace final y abrir la pestaña de WhatsApp
+            const urlWhatsApp = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
             window.open(urlWhatsApp, '_blank');
         });
     </script>
