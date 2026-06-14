@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Tailwind CSS CDN -->
@@ -66,14 +66,14 @@
 
     <!-- BARRA DE NAVEGACIÓN (HEADER) -->
     <header class="fixed w-full top-0 z-50 bg-dark-base/95 backdrop-blur-md border-b border-dark-border transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-1 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
             
-            <!-- Logotipo: Un poco menos ancho (w-72 md:w-80) pero más alto (h-24 md:h-28) -->
-            <a href="#inicio" class="flex items-center w-72 md:w-80 py-1">
+            <!-- Logotipo Corregido: Sin ancho forzado y con object-contain para evitar que se alargue -->
+            <a href="#inicio" class="flex items-center max-w-[200px] md:max-w-[240px] py-1">
                 <img src="logo-rincon.png" 
                      alt="Logotipo Rincón Caribeño" 
-                     class="w-full h-24 md:h-28 object-fill transition-transform duration-300 hover:scale-105"
-                     onerror="this.src='https://placehold.co/350x130/0A0A0A/D4AF37?text=Rinc%C3%B3n+Caribe%C3%B1o';">
+                     class="w-auto h-20 md:h-24 object-contain transition-transform duration-300 hover:scale-105"
+                     onerror="this.src='https://placehold.co/240x100/0A0A0A/D4AF37?text=Rinc%C3%B3n+Caribe%C3%B1o';">
             </a>
 
             <!-- Menú de Navegación de Escritorio -->
@@ -100,12 +100,11 @@
 
         <!-- Menú Desplegable Móvil -->
         <div id="mobileMenu" class="hidden lg:hidden bg-dark-base border-t border-dark-border px-6 py-6 space-y-4">
-            <a href="#inicio" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Inicio</a>
-            <a href="#historia" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Nuestra Historia</a>
-            <a href="#servicios" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios &amp; VIP</a>
-            <a href="#carta" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Carta de Bebidas</a>
-            <a href="#reservas" class="block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Reservar Ahora</a>
-            <!-- Botón directo de Reserva Móvil vinculado a WhatsApp -->
+            <a href="#inicio" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Inicio</a>
+            <a href="#historia" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Nuestra Historia</a>
+            <a href="#servicios" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios &amp; VIP</a>
+            <a href="#carta" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Carta de Bebidas</a>
+            <a href="#reservas" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Reservar Ahora</a>
             <a href="https://wa.me/573016976997?text=Hola,%20quiero%20solicitar%20información%20para%20una%20reserva%20en%20Rincón%20Caribeño." target="_blank" class="block text-center bg-gold text-dark-base font-bold py-3 rounded-full transition duration-300">
                 Reservar por WhatsApp
             </a>
@@ -116,23 +115,20 @@
     <section id="inicio" class="relative min-h-screen flex flex-col justify-center bg-cover bg-center pt-32 md:pt-40" style="background-image: linear-gradient(to bottom, rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1920&q=80');">
         <div class="max-w-6xl mx-auto px-6 w-full flex flex-col justify-between py-12 z-10 min-h-[calc(100vh-5rem)]">
             
-            <!-- Contenido de Texto Principal -->
             <div class="my-auto text-center max-w-4xl mx-auto py-6">
-                <!-- Distintivo Superior -->
                 <div class="inline-flex items-center space-x-2 border border-gold/30 bg-gold/10 px-4 py-1.5 rounded-full mb-6">
                     <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
                     <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">El Estadero de la Comunidad</span>
                 </div>
                 
                 <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                    El estadero cubierto <br class="hidden md:inline"><span class="text-gold">más grande</span> de la ciudad
+                    El estadero cubierto <br class="hidden md:inline"><span class="text-gold">más grande</span> de Sahagun
                 </h1>
                 
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
                     Unión perfecta de tradición, el mejor ambiente del Caribe y tecnología de última generación. Un espacio sin restricciones para todo tipo de público.
                 </p>
 
-                <!-- Botones de Conversión -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#reservas" class="w-full sm:w-auto bg-gold hover:bg-gold-hover text-dark-base font-bold px-8 py-4 rounded-xl text-base transition duration-300 gold-glow-hover flex items-center justify-center gap-2">
                         <i class="fa-solid fa-calendar-check"></i> Reservar Mesa VIP
@@ -143,7 +139,7 @@
                 </div>
             </div>
 
-            <!-- Estadísticas en Grid -->
+            <!-- Estadísticas -->
             <div class="w-full mt-8 hidden lg:block">
                 <div class="grid grid-cols-4 bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-2xl py-6 text-center gold-glow">
                     <div class="border-r border-dark-border px-4">
@@ -171,7 +167,6 @@
     <section id="historia" class="py-24 bg-dark-card border-y border-dark-border scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Lado de Texto -->
                 <div>
                     <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Nuestros Orígenes</span>
                     <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-6">De un Sueño a la Grandeza</h2>
@@ -188,7 +183,6 @@
                     </p>
                 </div>
 
-                <!-- Imagen Representativa -->
                 <div class="relative">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-dark-border gold-glow">
                         <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=1000&q=80" alt="Ambiente de Club y Música" class="w-full h-full object-cover">
@@ -211,7 +205,6 @@
                 <p class="text-gray-400">Diseñado meticulosamente para garantizar que tu estadía, ya sea con amigos, familiares o en eventos públicos y privados, sea inolvidable.</p>
             </div>
 
-            <!-- Grilla de Servicios -->
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Servicio 1 -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
@@ -372,16 +365,13 @@
                 <p class="text-gray-400">Completa el siguiente formulario para generar tu reserva directa por WhatsApp. Nuestro equipo confirmará tu solicitud en minutos.</p>
             </div>
 
-            <!-- Formulario -->
             <div class="bg-dark-card border border-dark-border p-8 md:p-12 rounded-3xl gold-glow">
                 <form id="reservaForm" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
-                        <!-- Nombre -->
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="nombre">Nombre Completo *</label>
                             <input type="text" id="nombre" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. Juan Pérez">
                         </div>
-                        <!-- Cedula -->
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="cedula">Cédula de Ciudadanía *</label>
                             <input type="text" id="cedula" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. 1040330222">
@@ -389,12 +379,10 @@
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
-                        <!-- Telefono -->
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="telefono">Número de Teléfono *</label>
                             <input type="tel" id="telefono" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. 3001234567">
                         </div>
-                        <!-- Correo -->
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="correo">Correo Electrónico *</label>
                             <input type="email" id="correo" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. juan@correo.com">
@@ -402,12 +390,10 @@
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
-                        <!-- Fecha -->
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="fecha">Fecha de Visita *</label>
                             <input type="date" id="fecha" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300">
                         </div>
-                        <!-- Zona -->
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="zona">Zona del Estadero *</label>
                             <select id="zona" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300">
@@ -418,12 +404,10 @@
                         </div>
                     </div>
 
-                    <!-- Botones de Envíos actualizados -->
                     <div class="pt-4 flex flex-col md:flex-row gap-4">
                         <button type="submit" class="flex-1 bg-gold hover:bg-gold-hover text-dark-base font-bold py-4 rounded-xl text-center transition duration-300 flex items-center justify-center gap-3 shadow-lg">
                             <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Reserva por WhatsApp
                         </button>
-                        <!-- Enlace de llamada directo al número +57 301 6976997 -->
                         <a href="tel:+573016976997" class="border border-dark-border hover:border-gold hover:text-gold text-center py-4 px-6 rounded-xl font-semibold transition duration-300 flex items-center justify-center gap-2">
                             <i class="fa-solid fa-phone"></i> Reservar por Llamada
                         </a>
@@ -436,13 +420,11 @@
     <!-- FOOTER Y DATOS DE CONTACTO -->
     <footer class="bg-dark-card border-t border-dark-border pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 mb-12">
-            <!-- Información Comercial -->
             <div class="space-y-4">
                 <span class="font-serif text-3xl font-bold text-gold tracking-wider">Rincón Caribeño</span>
                 <p class="text-sm text-gray-400 leading-relaxed">
                     Un espacio libre de restricciones pensado para unir a toda la comunidad al ritmo de la música de la mejor calidad.
                 </p>
-                <!-- Redes Sociales -->
                 <div class="flex space-x-4 pt-2">
                     <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full border border-dark-border flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition duration-300">
                         <i class="fa-brands fa-instagram text-lg"></i>
@@ -453,7 +435,6 @@
                 </div>
             </div>
 
-            <!-- Horarios -->
             <div class="space-y-4">
                 <h4 class="text-lg font-bold text-white font-serif">Horarios &amp; Eventos</h4>
                 <div class="w-10 h-0.5 bg-gold"></div>
@@ -472,7 +453,6 @@
                 </ul>
             </div>
 
-            <!-- Contacto Directo -->
             <div class="space-y-4">
                 <h4 class="text-lg font-bold text-white font-serif">Contacto Directo</h4>
                 <div class="w-10 h-0.5 bg-gold"></div>
@@ -493,7 +473,6 @@
             </div>
         </div>
 
-        <!-- Derechos de Autor -->
         <div class="max-w-7xl mx-auto px-6 border-t border-dark-border pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
             <p>&copy; 2026 Rincón Caribeño. Todos los derechos reservados.</p>
             <p>Hecho con pasión en Colombia</p>
@@ -506,29 +485,31 @@
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const menuIcon = document.getElementById('menuIcon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        menuBtn.addEventListener('click', () => {
+        function toggleMenu() {
             mobileMenu.classList.toggle('hidden');
             if (mobileMenu.classList.contains('hidden')) {
                 menuIcon.className = 'fa-solid fa-bars';
             } else {
                 menuIcon.className = 'fa-solid fa-xmark';
             }
-        });
+        }
 
-        // Cerrar menú al presionar un enlace en móviles
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
+        menuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = 'fa-solid fa-bars';
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
             });
         });
 
-        // Lógica de Captura del Formulario y Envió Automatizado a WhatsApp
-        document.getElementById('reservaForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que la página se recargue
+        // Formulario a WhatsApp
+        document.getElementById('reservaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-            // Capturar los valores ingresados por el usuario
             const nombre = document.getElementById('nombre').value;
             const cedula = document.getElementById('cedula').value;
             const telefono = document.getElementById('telefono').value;
@@ -536,23 +517,18 @@
             const fecha = document.getElementById('fecha').value;
             const zona = document.getElementById('zona').value;
 
-            // Formatear el mensaje de texto para WhatsApp
-            const mensaje = `¡Hola, Rincón Caribeño! 👋%0A` +
-                            `Me gustaría solicitar una reserva. Aquí están mis datos:%0A%0A` +
-                            `*Nombre:* ${nombre}%0A` +
-                            `*Cédula:* ${cedula}%0A` +
-                            `*Teléfono:* ${telefono}%0A` +
-                            `*Correo:* ${correo}%0A` +
-                            `*Fecha de Visita:* ${fecha}%0A` +
-                            `*Zona elegida:* ${zona}%0A%0A` +
-                            `Quedo atento a su confirmación. ¡Muchas gracias!`;
+            const numeroWhatsApp = "573016976997";
+            const mensaje = `Hola Rincón Caribeño, me gustaría realizar una reserva:\n\n` +
+                            `• *Nombre:* ${nombre}\n` +
+                            `• *Cédula:* ${cedula}\n` +
+                            `• *Teléfono:* ${telefono}\n` +
+                            `• *Correo:* ${correo}\n` +
+                            `• *Fecha de Visita:* ${fecha}\n` +
+                            `• *Zona elegida:* ${zona}\n\n` +
+                            `Quedo atento a la confirmación de la mesa. ¡Muchas gracias!`;
 
-            // Número telefónico configurado internacionalmente (+573016976997)
-            const numeroTelefono = "573016976997";
-
-            // Crear el enlace final y abrir la pestaña de WhatsApp
-            const urlWhatsApp = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
-            window.open(urlWhatsApp, '_blank');
+            const mensajeCodificado = encodeURIComponent(mensaje);
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`, '_blank');
         });
     </script>
 </body>
