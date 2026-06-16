@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Tailwind CSS CDN -->
@@ -68,7 +68,7 @@
     <header class="fixed w-full top-0 z-50 bg-dark-base/95 backdrop-blur-md border-b border-dark-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
             
-            <!-- Logotipo Corregido: Sin ancho forzado y con object-contain para evitar que se alargue -->
+            <!-- Logotipo Protegido visualmente -->
             <a href="#inicio" class="flex items-center max-w-[200px] md:max-w-[240px] py-1">
                 <img src="logo-rincon.png" 
                      alt="Logotipo Rincón Caribeño" 
@@ -122,7 +122,7 @@
                 </div>
                 
                 <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                    El estadero cubierto <br class="hidden md:inline"><span class="text-gold">más grande</span> de Sahagun
+                    El estadero cubierto <br class="hidden md:inline"><span class="text-gold">más grande</span> de Sahagún
                 </h1>
                 
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -281,76 +281,133 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Selección Especial</span>
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Nuestra Carta de Bebidas</h2>
-                <p class="text-gray-400">Variedad de licores nacionales, importados, cervezas heladas y cócteles tropicales con precios imbatibles.</p>
+                <p class="text-gray-400">Variedad de licores, cervezas bien heladas y bebidas refrescantes con los mejores precios de Sahagún.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Licores Clásicos -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                
+                <!-- CATEGORÍA 1: SIN ALCOHOL -->
                 <div class="space-y-6">
                     <h3 class="font-serif text-2xl text-gold border-b border-dark-border pb-3 flex items-center gap-3">
-                        <i class="fa-solid fa-wine-glass"></i> Licores Clásicos
+                        <i class="fa-solid fa-bottle-water"></i> Refrescos e Hidratación
                     </h3>
                     
                     <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
                         <div>
-                            <h4 class="font-bold text-white">Aguardiente Antioqueño (Media)</h4>
-                            <p class="text-sm text-gray-400">El rey de la fiesta, servido helado.</p>
+                            <h4 class="font-bold text-white">Agua</h4>
+                            <p class="text-sm text-gray-400">Para refrescar la noche.</p>
                         </div>
-                        <span class="text-gold font-bold text-lg">Económico</span>
+                        <span class="text-gold font-bold text-lg">$3.000</span>
                     </div>
 
                     <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
                         <div>
-                            <h4 class="font-bold text-white">Ron Medellín Añejo 3 Años (Botella)</h4>
-                            <p class="text-sm text-gray-400">Sabor tradicional de la mejor caña.</p>
+                            <h4 class="font-bold text-white">Soda</h4>
+                            <p class="text-sm text-gray-400">Burbujeante y fría.</p>
                         </div>
-                        <span class="text-gold font-bold text-lg">Económico</span>
+                        <span class="text-gold font-bold text-lg">$5.000</span>
                     </div>
 
                     <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
                         <div>
-                            <h4 class="font-bold text-white">Aguardiente Tapa Azul (Botella)</h4>
-                            <p class="text-sm text-gray-400">Suave, sin azúcar para extender la noche.</p>
+                            <h4 class="font-bold text-white">Gaseosa</h4>
+                            <p class="text-sm text-gray-400">Variedad de sabores.</p>
                         </div>
-                        <span class="text-gold font-bold text-lg">Económico</span>
+                        <span class="text-gold font-bold text-lg">$5.000</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Gatorade</h4>
+                            <p class="text-sm text-gray-400">Ideal para recuperar energía.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">$5.000</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Electrolit</h4>
+                            <p class="text-sm text-gray-400">Máxima hidratación.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">$10.000</span>
                     </div>
                 </div>
 
-                <!-- Cervezas y Cócteles -->
+                <!-- CATEGORÍA 2: CERVEZAS -->
                 <div class="space-y-6">
                     <h3 class="font-serif text-2xl text-gold border-b border-dark-border pb-3 flex items-center gap-3">
-                        <i class="fa-solid fa-beer-mug-empty"></i> Cervezas y Cócteles
+                        <i class="fa-solid fa-beer-mug-empty"></i> Cervezas Heladas
                     </h3>
 
                     <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
                         <div>
-                            <h4 class="font-bold text-white">Cerveza Águila / Club Colombia</h4>
-                            <p class="text-sm text-gray-400">Nacionales bien heladas en balde o individuales.</p>
+                            <h4 class="font-bold text-white">Cervezas Tradicionales</h4>
+                            <p class="text-sm text-gray-400">Águila Light, Póker, Águila Negra, Costeñita, Budweiser.</p>
                         </div>
-                        <span class="text-gold font-bold text-lg">Precio Especial</span>
+                        <span class="text-gold font-bold text-lg">$3.000</span>
                     </div>
 
                     <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
                         <div>
-                            <h4 class="font-bold text-white">Corona Extra (Importada)</h4>
-                            <p class="text-sm text-gray-400">Refrescante toque de limón caribeño.</p>
+                            <h4 class="font-bold text-white">Cervezas Especiales</h4>
+                            <p class="text-sm text-gray-400">Coronita, Club Colombia.</p>
                         </div>
-                        <span class="text-gold font-bold text-lg">Económico</span>
-                    </div>
-
-                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
-                        <div>
-                            <h4 class="font-bold text-white">Cócteles &amp; Sin Alcohol</h4>
-                            <p class="text-sm text-gray-400">Amplia gama de licores mezclados y jugos naturales.</p>
-                        </div>
-                        <span class="text-gold font-bold text-lg">Variedad</span>
+                        <span class="text-gold font-bold text-lg">$4.000</span>
                     </div>
                 </div>
+
+                <!-- CATEGORÍA 3: LICORES -->
+                <div class="space-y-6 md:col-span-2 lg:col-span-1">
+                    <h3 class="font-serif text-2xl text-gold border-b border-dark-border pb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-wine-glass"></i> Licores Especiales
+                    </h3>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Panchitas (Medias)</h4>
+                            <p class="text-sm text-gray-400">Aguardiente Antioqueño (Verde/Azul) o Ron Medellín.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">$40.000</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Piponas</h4>
+                            <p class="text-sm text-gray-400">Aguardiente Antioqueño (Verde, Amarillo, Azul), Ron Caldas o Ron Medellín.</p>
+                        </div>
+                        <span class="text-gold font-bold text-sm italic">Consultar</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Litros</h4>
+                            <p class="text-sm text-gray-400">Aguardiente Antioqueño (Verde, Amarillo, Azul), Ron Medellín o Ron Caldas.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">$100.000</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Whiskies Premium (750ml)</h4>
+                            <p class="text-sm text-gray-400">Old Parr, Buchanan's Master.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">$250.000</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
+                        <div>
+                            <h4 class="font-bold text-white">Buchanan's Deluxe (750ml)</h4>
+                            <p class="text-sm text-gray-400">Sabor suave y exclusivo.</p>
+                        </div>
+                        <span class="text-gold font-bold text-lg">$220.000</span>
+                    </div>
+                </div>
+
             </div>
             
             <div class="mt-12 text-center bg-dark-base border border-dark-border p-6 rounded-2xl max-w-2xl mx-auto">
                 <p class="text-sm text-gray-300">
-                    <i class="fa-solid fa-circle-info text-gold mr-2"></i>Ofrecemos opciones para todos los gustos y presupuestos con promociones especiales durante nuestros eventos quincenales.
+                    <i class="fa-solid fa-circle-info text-gold mr-2"></i>Los precios de los licores corresponden a la presentación de botella completa, a menos que se indique lo contrario. ¡Disfruta con responsabilidad!
                 </p>
             </div>
         </div>
@@ -517,18 +574,24 @@
             const fecha = document.getElementById('fecha').value;
             const zona = document.getElementById('zona').value;
 
-            const numeroWhatsApp = "573016976997";
-            const mensaje = `Hola Rincón Caribeño, me gustaría realizar una reserva:\n\n` +
-                            `• *Nombre:* ${nombre}\n` +
-                            `• *Cédula:* ${cedula}\n` +
-                            `• *Teléfono:* ${telefono}\n` +
-                            `• *Correo:* ${correo}\n` +
-                            `• *Fecha de Visita:* ${fecha}\n` +
-                            `• *Zona elegida:* ${zona}\n\n` +
-                            `Quedo atento a la confirmación de la mesa. ¡Muchas gracias!`;
+            // Teléfono de Rincón Caribeño
+            const numeroWhatsapp = "573016976997"; 
 
+            // Construcción del mensaje con formato limpio para WhatsApp
+            const mensaje = `Hola Rincón Caribeño, quiero solicitar una reserva:\n\n` +
+                            `👤 *Nombre:* ${nombre}\n` +
+                            `💳 *Cédula:* ${cedula}\n` +
+                            `📞 *Teléfono:* ${telefono}\n` +
+                            `📧 *Correo:* ${correo}\n` +
+                            `📅 *Fecha de Visita:* ${fecha}\n` +
+                            `📍 *Zona:* ${zona}`;
+
+            // Codificar el texto para que sea válido en una URL
             const mensajeCodificado = encodeURIComponent(mensaje);
-            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`, '_blank');
+            
+            // Generar enlace y redirigir
+            const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensajeCodificado}`;
+            window.open(urlWhatsapp, '_blank');
         });
     </script>
 </body>
