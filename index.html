@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rincón Caribeño | El Estadero Cubierto Más Grande - Edición Mundialista</title>
+    <title>Rincón Caribeño | El Estadero Cubierto Más Grande</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600;700&family=Playfair+Display:ital,wght=0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Tailwind CSS CDN -->
@@ -66,14 +66,14 @@
 
     <!-- CINTA INFORMATIVA MUNDIALISTA -->
     <div class="bg-gradient-to-r from-dark-card via-gold/20 to-dark-card text-center py-2 border-b border-gold/30 text-xs font-semibold uppercase tracking-widest text-gold-light z-50 relative mt-0">
-        <i class="fa-solid fa-trophy text-gold mr-2 animate-bounce"></i> ¡Vive la pasión del mundial en nuestras pantallas gigantes! <i class="fa-solid fa-soccer-ball text-gold ml-2"></i>
+        <i class="fa-solid fa-trophy text-gold mr-2 animate-bounce"></i> ¡La Casa de la Selección! Vive el Mundial en Pantallas Gigantes y Sonido Profesional <i class="fa-solid fa-soccer-ball text-gold ml-2"></i>
     </div>
 
     <!-- BARRA DE NAVEGACIÓN (HEADER) -->
     <header class="fixed w-full top-8 z-40 bg-dark-base/95 backdrop-blur-md border-b border-dark-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
             
-            <!-- Logotipo Protegido visualmente -->
+            <!-- Logotipo -->
             <a href="#inicio" class="flex items-center max-w-[200px] md:max-w-[240px] py-1">
                 <img src="imagenes/logo-rincon-convertido-de-png.webp" 
                      alt="Logotipo Rincón Caribeño" 
@@ -86,7 +86,7 @@
                 <a href="#inicio" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Inicio</a>
                 <a href="#historia" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Historia</a>
                 <a href="#servicios" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Servicios</a>
-                <a href="#carta" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Bebidas y Más</a>
+                <a href="#carta" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Bebidas</a>
                 <a href="#reservas" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Reservas</a>
             </nav>
 
@@ -107,18 +107,26 @@
         <div id="mobileMenu" class="hidden lg:hidden bg-dark-base border-t border-dark-border px-6 py-6 space-y-4">
             <a href="#inicio" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Inicio</a>
             <a href="#historia" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Nuestra Historia</a>
-            <a href="#servicios" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios Mundialistas</a>
-            <a href="#carta" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Carta &amp; Pasabocas</a>
+            <a href="#servicios" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios</a>
+            <a href="#carta" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Carta de Bebidas</a>
             <a href="#reservas" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Asegurar Entrada</a>
-            <a href="https://wa.me/573016976997?text=Hola,%20quiero%20solicitar%20información%20para%20una%20reserva%20mundialista%20en%20Rincón%20Caribeño." target="_blank" class="block text-center bg-gold text-dark-base font-bold py-3 rounded-full transition duration-300">
-                Reservar por WhatsApp
-            </a>
         </div>
     </header>
 
-    <!-- SECCIÓN INICIO (HERO) - CON TU IMAGEN DE FONDO LOCAL -->
-    <section id="inicio" class="relative min-h-screen flex flex-col justify-center bg-cover bg-center pt-36 md:pt-44" style="background-image: linear-gradient(to bottom, rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('file:///C:/Users/GIGA%20IT/OneDrive/ONE%20DRIVE%20MILENA/Escritorio/personal/imagenes/fondo%20de%20inicio.png');">
-        <div class="max-w-6xl mx-auto px-6 w-full flex flex-col justify-between py-12 z-10 min-h-[calc(100vh-5rem)]">
+    <!-- SECCIÓN INICIO (HERO) -->
+    <section id="inicio" class="relative min-h-screen flex flex-col justify-center pt-36 md:pt-44 overflow-hidden">
+        
+        <!-- Tu etiqueta de imagen de fondo nativa -->
+        <img src="imagenes/fondo-de-inicio.webp" 
+             alt="Ambiente Rincón Caribeño" 
+             class="absolute inset-0 w-full h-full object-cover z-0">
+             
+        <!-- Capa de degradado oscuro para que el texto resalte y mantenga la elegancia -->
+        <div class="absolute inset-0 z-10" 
+             style="background-image: linear-gradient(to bottom, rgba(10,10,10,0.85), rgba(10,10,10,0.95));"></div>
+
+        <!-- Contenido principal (Subido a z-20 para quedar sobre la imagen) -->
+        <div class="max-w-6xl mx-auto px-6 w-full flex flex-col justify-between py-12 z-20 min-h-[calc(100vh-5rem)]">
             
             <div class="my-auto text-center max-w-4xl mx-auto py-6">
                 <div class="inline-flex items-center space-x-2 border border-gold/30 bg-gold/10 px-4 py-1.5 rounded-full mb-6">
@@ -127,11 +135,11 @@
                 </div>
                 
                 <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                    El estadero cubierto <br class="hidden md:inline"><span class="text-gold">más mundialista</span> de Sahagún
+                    El templo de la hinchada <br class="hidden md:inline">en <span class="text-gold">Sahagún</span>
                 </h1>
                 
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Unión perfecta de tradición caribeña, tecnología de última generación y la fiesta del fútbol global. Pantallas gigantes y sonido envolvente para gritar cada gol.
+                    Unión perfecta de tradición caribeña, tecnología de última generación y la fiesta del fútbol global. Pantallas gigantes y sonido profesional envolvente para gritar cada gol de nuestra Selección.
                 </p>
 
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -139,12 +147,12 @@
                         <i class="fa-solid fa-trophy"></i> Reservar Mesa / Palco VIP
                     </a>
                     <a href="#carta" class="w-full sm:w-auto border border-gray-400 hover:border-gold hover:text-gold font-bold px-8 py-4 rounded-xl text-base transition duration-300 flex items-center justify-center gap-2">
-                        Ver Bebidas y Menú
+                        Ver Bebidas y Precios
                     </a>
                 </div>
             </div>
 
-            <!-- Estadísticas Mundialistas -->
+            <!-- Estadísticas -->
             <div class="w-full mt-8 hidden lg:block">
                 <div class="grid grid-cols-4 bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-2xl py-6 text-center gold-glow">
                     <div class="border-r border-dark-border px-4">
@@ -190,18 +198,14 @@
 
                 <div class="relative">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-dark-border gold-glow">
-                        <img src="imagenes/ponerla de fondo-convertido-de-jpg.webp" alt="Ambiente de Club y Fútbol" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 bg-dark-base border border-gold/40 p-6 rounded-2xl hidden sm:block max-w-[240px]">
-                        <p class="text-gold font-serif text-3xl font-bold mb-1"><i class="fa-solid fa-soccer-ball animate-spin-slow"></i> 100%</p>
-                        <p class="text-xs font-medium text-gray-400 uppercase tracking-widest">Compromiso con la mejor transmisión en vivo</p>
+                        <img src="imagenes/imagen-nuestros-origenes.webp" alt="Nuestros Orígenes Rincón Caribeño" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN SERVICIOS -->
+    <!-- SECCIÓN SERVICIOS / DIFERENCIALES MUNDIALISTAS -->
     <section id="servicios" class="py-24 bg-dark-base scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -210,8 +214,8 @@
                 <p class="text-gray-400">Diseñado meticulosamente para garantizar que vivas cada compromiso, ya sea con amigos o familiares, con la mayor comodidad de Sahagún.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Servicio 1 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Diferencial 1: Atención Sin Pausas -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
                         <i class="fa-solid fa-users-gear"></i>
@@ -222,7 +226,7 @@
                     </p>
                 </div>
 
-                <!-- Servicio 2 -->
+                <!-- Diferencial 2: Palcos VIP de Selección -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
                         <i class="fa-solid fa-crown"></i>
@@ -233,7 +237,7 @@
                     </p>
                 </div>
 
-                <!-- Servicio 3 -->
+                <!-- Diferencial 3: Parqueadero Propio -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
                         <i class="fa-solid fa-car-tunnel"></i>
@@ -244,10 +248,10 @@
                     </p>
                 </div>
 
-                <!-- Servicio 4 -->
+                <!-- Diferencial 4: Ambiente de Fiesta -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
-                        <i class="fa-solid fa-square-poll-horizontal"></i>
+                        <i class="fa-solid fa-compact-disc"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Ambiente de Fiesta</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
@@ -255,10 +259,10 @@
                     </p>
                 </div>
 
-                <!-- Servicio 5 -->
+                <!-- Diferencial 5: Precios de Hincha -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
-                        <i class="fa-solid fa-sack-dollar"></i>
+                        <i class="fa-solid fa-tags"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Precios de Hincha</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
@@ -266,10 +270,10 @@
                     </p>
                 </div>
 
-                <!-- Servicio 6 -->
+                <!-- Diferencial 6: Reservas Corporativas -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
-                        <i class="fa-solid fa-shield-halved"></i>
+                        <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Reservas Corporativas</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
@@ -280,13 +284,13 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CARTA DE BEBIDAS Y PASABOCAS -->
+    <!-- SECCIÓN CARTA DE BEBIDAS -->
     <section id="carta" class="py-24 bg-dark-card border-y border-dark-border scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">El Menú Oficial</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Carta Mundialista</h2>
-                <p class="text-gray-400">Variedad de licores, cervezas bien heladas y snacks perfectos para vivir el partido.</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Carta de Bebidas</h2>
+                <p class="text-gray-400">Variedad de licores selectos y cervezas bien heladas perfectas para vivir el partido.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -324,7 +328,7 @@
                     <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
                         <div>
                             <h4 class="font-bold text-white">Gatorade</h4>
-                            <p class="text-sm text-gray-400">Ideal para recuperar la energía del grito de gol.</p>
+                            <p class="text-sm text-gray-400">Ideal para recuperar la energía del gol.</p>
                         </div>
                         <span class="text-gold font-bold text-lg">$5.000</span>
                     </div>
@@ -358,18 +362,6 @@
                             <p class="text-sm text-gray-400">Coronita, Club Colombia.</p>
                         </div>
                         <span class="text-gold font-bold text-lg">$4.000</span>
-                    </div>
-                    
-                    <!-- PASABOCAS -->
-                    <h3 class="font-serif text-2xl text-gold border-b border-dark-border pb-3 pt-4 flex items-center gap-3">
-                        <i class="fa-solid fa-utensils"></i> Pasabocas de Cancha
-                    </h3>
-                    <div class="flex justify-between items-start border-b border-dashed border-dark-border pb-4">
-                        <div>
-                            <h4 class="font-bold text-white">Picada Rincón</h4>
-                            <p class="text-sm text-gray-400">Variedad para compartir con el grupo del partido.</p>
-                        </div>
-                        <span class="text-gold font-bold text-lg">Consultar</span>
                     </div>
                 </div>
 
@@ -424,7 +416,7 @@
             
             <div class="mt-12 text-center bg-dark-base border border-dark-border p-6 rounded-2xl max-w-2xl mx-auto">
                 <p class="text-sm text-gray-300">
-                    <i class="fa-solid fa-circle-info text-gold mr-2"></i>Los precios corresponden a botella completa. Durante los partidos del Mundial contaremos con promociones relámpago en cervezas. ¡Disfruta con responsabilidad!
+                    <i class="fa-solid fa-circle-info text-gold mr-2"></i>Los precios corresponden a botella completa. ¡Disfruta con responsabilidad!
                 </p>
             </div>
         </div>
@@ -434,9 +426,9 @@
     <section id="reservas" class="py-24 bg-dark-base scroll-mt-20">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
-                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Reserva Mundialista Online</span>
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Reserva Online</span>
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Asegura tu Puesto frente a la Pantalla</h2>
-                <p class="text-gray-400">Completa tus datos para agendar tu mesa de forma directa. Los cupos para los partidos clave del torneo se agotan con rapidez.</p>
+                <p class="text-gray-400">Completa tus datos para agendar tu mesa de forma directa.</p>
             </div>
 
             <div class="bg-dark-card border border-dark-border p-8 md:p-12 rounded-3xl gold-glow">
@@ -447,19 +439,8 @@
                             <input type="text" id="nombre" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. Juan Pérez">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="cedula">Cédula de Ciudadanía *</label>
-                            <input type="text" id="cedula" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. 1040330222">
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="telefono">Número de Teléfono *</label>
                             <input type="tel" id="telefono" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. 3001234567">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="correo">Correo Electrónico *</label>
-                            <input type="email" id="correo" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. juan@correo.com">
                         </div>
                     </div>
 
@@ -471,83 +452,25 @@
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="zona">Ubicación Solicitada *</label>
                             <select id="zona" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300">
-                                <option value="Palco VIP Mundialista">Palco VIP Mundialista - Sofás preferenciales frente a pantalla</option>
-                                <option value="Zona General Hinchada">Zona General Hinchada - Mesas centrales con excelente acústica</option>
-                                <option value="Evento Privado / Corporativo">Partido Privado - Reservas corporativas para empresas</option>
+                                <option value="Palco VIP Mundialista">Palco VIP - Sofás preferenciales frente a pantalla</option>
+                                <option value="Zona General Hinchada">Zona General - Mesas centrales con excelente acústica</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- OPCIÓN INTERÉS FUTBOLERO -->
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="partido">¿Qué partido deseas ver? (Opcional)</label>
-                        <input type="text" id="partido" class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. Colombia vs Brasil / Fase de Grupos">
-                    </div>
-
-                    <div class="pt-4 flex flex-col md:flex-row gap-4">
-                        <button type="submit" class="flex-1 bg-gold hover:bg-gold-hover text-dark-base font-bold py-4 rounded-xl text-center transition duration-300 flex items-center justify-center gap-3 shadow-lg">
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-gold hover:bg-gold-hover text-dark-base font-bold py-4 rounded-xl text-center transition duration-300 flex items-center justify-center gap-3 shadow-lg">
                             <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Reserva por WhatsApp
                         </button>
-                        <a href="tel:+573016976997" class="border border-dark-border hover:border-gold hover:text-gold text-center py-4 px-6 rounded-xl font-semibold transition duration-300 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-phone"></i> Reservar por Llamada
-                        </a>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER Y DATOS DE CONTACTO -->
-    <footer class="bg-dark-card border-t border-dark-border pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 mb-12">
-            <div class="space-y-4">
-                <span class="font-serif text-3xl font-bold text-gold tracking-wider">Rincón Caribeño</span>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Un espacio pensado para unir a toda la comunidad al ritmo de la música y la pasión de los mejores eventos del mundo.
-                </p>
-                <div class="flex space-x-4 pt-2">
-                    <a href="https://www.instagram.com/rincon_caribeno1/" target="_blank" class="w-10 h-10 rounded-full border border-dark-border flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition duration-300">
-                        <i class="fa-brands fa-instagram text-lg"></i>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100083029221234" target="_blank" class="w-10 h-10 rounded-full border border-dark-border flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition duration-300">
-                        <i class="fa-brands fa-facebook-f text-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <h4 class="text-lg font-bold text-white font-serif">Horarios Mundialistas</h4>
-                <div class="w-10 h-0.5 bg-gold"></div>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li class="flex justify-between">
-                        <span>Partidos en la Mañana/Tarde:</span>
-                        <span class="text-white font-semibold">Abierto según calendario de juegos</span>
-                    </li>
-                    <li class="flex justify-between">
-                        <span>Eventos de Fin de Semana:</span>
-                        <span class="text-white font-semibold">Fiesta extendida</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="space-y-4">
-                <h4 class="text-lg font-bold text-white font-serif">Contacto Directo</h4>
-                <div class="w-10 h-0.5 bg-gold"></div>
-                <p class="text-sm text-gray-400"><i class="fa-solid fa-location-dot text-gold mr-2"></i> Sahagún, Córdoba</p>
-                <p class="text-sm text-gray-400"><i class="fa-solid fa-phone text-gold mr-2"></i> +57 301 6976997</p>
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 border-t border-dark-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-xs text-gray-500 text-center md:text-left">
-                &copy; 2026 Rincón Caribeño. Todos los derechos reservados. Sede Oficial del Fanático.
-            </p>
-        </div>
-    </footer>
-
-    <!-- LÓGICA DE CONTROLADORES JAVASCRIPT -->
+    <!-- SCRIPTS INTERACTIVOS -->
     <script>
-        // Control de Menú Móvil
+        // Lógica del menú móvil
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const menuIcon = document.getElementById('menuIcon');
@@ -561,7 +484,7 @@
             }
         });
 
-        // Cerrar menú móvil al hacer click en un enlace
+        // Cerrar menú móvil al hacer clic en un enlace
         document.querySelectorAll('.mobile-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -569,29 +492,20 @@
             });
         });
 
-        // Automatización de envío de Reserva Mundialista vía WhatsApp
+        // Envió de Formulario a WhatsApp
         document.getElementById('reservaForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const nombre = document.getElementById('nombre').value;
-            const cedula = document.getElementById('cedula').value;
             const telefono = document.getElementById('telefono').value;
-            const correo = document.getElementById('correo').value;
             const fecha = document.getElementById('fecha').value;
             const zona = document.getElementById('zona').value;
-            const partido = document.getElementById('partido').value || "No especificado";
-
-            const mensaje = `Hola Rincón Caribeño, quiero solicitar una Reserva Mundialista:\n\n` +
-                            `• Nombre: ${nombre}\n` +
-                            `• Cédula: ${cedula}\n` +
-                            `• Teléfono: ${telefono}\n` +
-                            `• Correo: ${correo}\n` +
-                            `• Fecha de Visita: ${fecha}\n` +
-                            `• Ubicación Solicitada: ${zona}\n` +
-                            `• Partido de Interés: ${partido}`;
-
-            const urlWhatsApp = `https://wa.me/573016976997?text=${encodeURIComponent(mensaje)}`;
-            window.open(urlWhatsApp, '_blank');
+            
+            const numeroWhatsApp = "573016976997";
+            
+            const mensaje = `Hola, quiero solicitar una reserva en Rincón Caribeño.%0A%0A*Nombre:* ${nombre}%0A*Teléfono:* ${telefono}%0A*Fecha:* ${fecha}%0A*Ubicación:* ${zona}`;
+            
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
         });
     </script>
 </body>
