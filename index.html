@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rincón Caribeño | El Estadero Cubierto Más Grande</title>
+    <title>Rincón Caribeño | Gran Evento Vallenato de Amor y Amistad</title>
+    <meta name="description" content="Sábado 19 de Septiembre: Celebra Amor y Amistad con artista de vallenato invitado y conjuntos en vivo en el estadero cubierto más grande de Sahagún.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -27,6 +31,10 @@
                             base: '#0A0A0A',
                             card: '#121212',
                             border: '#2A2212'
+                        },
+                        love: {
+                            DEFAULT: '#8B0000',
+                            light: '#E63946'
                         }
                     },
                     fontFamily: {
@@ -40,6 +48,9 @@
     <style>
         .gold-glow {
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+        }
+        .love-glow {
+            box-shadow: 0 0 15px rgba(230, 57, 70, 0.25);
         }
         .gold-glow-hover:hover {
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
@@ -62,8 +73,13 @@
 </head>
 <body class="bg-dark-base text-gray-200 font-sans antialiased min-h-screen">
 
+    <!-- TOP BANNER AMOR Y AMISTAD / EVENTO VALLENATO -->
+    <div class="fixed w-full top-0 z-50 bg-love text-white text-center py-1.5 text-xs font-bold tracking-widest uppercase shadow-md px-4">
+        🔥 SÁBADO 19 DE SEPTIEMBRE: GRAN SHOW VALLENATO EN VIVO 🔥 ¡RESERVA TU MESA!
+    </div>
+
     <!-- BARRA DE NAVEGACIÓN (HEADER) -->
-    <header class="fixed w-full top-0 z-40 bg-dark-base/95 backdrop-blur-md border-b border-dark-border transition-all duration-300">
+    <header class="fixed w-full top-[28px] z-40 bg-dark-base/95 backdrop-blur-md border-b border-dark-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
             
             <!-- Logotipo -->
@@ -77,7 +93,8 @@
             <!-- Menú de Navegación de Escritorio -->
             <nav class="hidden lg:flex items-center space-x-8">
                 <a href="#inicio" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Inicio</a>
-                <a href="#historia" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Historia</a>
+                <a href="#evento" class="text-sm font-medium hover:text-love-light transition duration-300 uppercase tracking-wider"><i class="fa-solid fa-guitar mr-1"></i>Evento 19 Sep</a>
+                <a href="#historia" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Nosotros</a>
                 <a href="#servicios" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Servicios</a>
                 <a href="#carta" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Bebidas</a>
                 <a href="#reservas" class="text-sm font-medium hover:text-gold transition duration-300 uppercase tracking-wider">Reservas</a>
@@ -86,7 +103,7 @@
             <!-- Botón de Acción Rápida (Escritorio) -->
             <div class="hidden md:block">
                 <a href="#reservas" class="border border-gold text-gold hover:bg-gold hover:text-dark-base font-semibold px-6 py-2.5 rounded-full text-sm transition duration-300 gold-glow">
-                    Reservar tu Mesa
+                    Reservar Mesa VIP
                 </a>
             </div>
 
@@ -99,15 +116,16 @@
         <!-- Menú Desplegable Móvil -->
         <div id="mobileMenu" class="hidden lg:hidden bg-dark-base border-t border-dark-border px-6 py-6 space-y-4">
             <a href="#inicio" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Inicio</a>
-            <a href="#historia" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Nuestra Historia</a>
+            <a href="#evento" class="mobile-link block text-lg font-medium text-love-light hover:text-gold transition duration-300">🎉 Evento 19 Septiembre</a>
+            <a href="#historia" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Nosotros</a>
             <a href="#servicios" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Servicios</a>
             <a href="#carta" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Carta de Bebidas</a>
-            <a href="#reservas" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Asegurar Entrada</a>
+            <a href="#reservas" class="mobile-link block text-lg font-medium text-gray-300 hover:text-gold transition duration-300">Asegurar Mesa</a>
         </div>
     </header>
 
     <!-- SECCIÓN INICIO (HERO) -->
-    <section id="inicio" class="relative min-h-screen flex flex-col justify-center pt-28 md:pt-36 overflow-hidden">
+    <section id="inicio" class="relative min-h-screen flex flex-col justify-center pt-32 md:pt-40 overflow-hidden">
         <img src="imagenes/fondoyfiesta.webp" 
              alt="Ambiente Rincón Caribeño" 
              class="absolute inset-0 w-full h-full object-cover z-0">
@@ -115,49 +133,65 @@
         <div class="absolute inset-0 z-10" 
              style="background-image: linear-gradient(to bottom, rgba(10,10,10,0.85), rgba(10,10,10,0.95));"></div>
 
-        <div class="max-w-6xl mx-auto px-6 w-full flex flex-col justify-between py-12 z-20 min-h-[calc(100vh-5rem)]">
+        <div class="max-w-6xl mx-auto px-6 w-full flex flex-col justify-between py-12 z-20 min-h-[calc(100vh-6rem)]">
             <div class="my-auto text-center max-w-4xl mx-auto py-6">
-                <div class="inline-flex items-center space-x-2 border border-gold/30 bg-gold/10 px-4 py-1.5 rounded-full mb-6">
-                    <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">El Estadero Cubierto Más Grande de la Región</span>
+                <div class="inline-flex items-center space-x-2 border border-love-light/50 bg-love/20 px-4 py-1.5 rounded-full mb-6">
+                    <i class="fa-solid fa-guitar text-love-light animate-pulse"></i>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-200">Sábado 19 de Septiembre • Gran Evento</span>
                 </div>
                 
                 <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                    Vive la verdadera tradición y rumba en <span class="text-gold">Rincón Caribeño</span>
+                    Amor y Amistad con <span class="text-gold">Vallenato en Vivo</span>
                 </h1>
                 
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Disfruta de la mejor música, un ambiente inigualable, licores selectos y la atención de primera que mereces en Sahagún.
+                    Este <strong class="text-white">19 de septiembre</strong> celebra con un artista de vallenato invitado y excelentes conjuntos en vivo. ¡Asegura la mejor ubicación para tu grupo o pareja!
                 </p>
 
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#reservas" class="w-full sm:w-auto bg-gold hover:bg-gold-hover text-dark-base font-bold px-8 py-4 rounded-xl text-base transition duration-300 gold-glow-hover flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-glass-cheers"></i> Reservar Mesa / Zona VIP
+                        <i class="fa-solid fa-ticket"></i> Reservar Mesa para el Evento
                     </a>
-                    <a href="#carta" class="w-full sm:w-auto border border-gray-400 hover:border-gold hover:text-gold font-bold px-8 py-4 rounded-xl text-base transition duration-300 flex items-center justify-center gap-2">
-                        Ver Carta de Bebidas
+                    <a href="#evento" class="w-full sm:w-auto border border-love-light text-love-light hover:bg-love-light hover:text-white font-bold px-8 py-4 rounded-xl text-base transition duration-300 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-info"></i> Detalles del Evento
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Estadísticas -->
-            <div class="w-full mt-8 hidden lg:block">
-                <div class="grid grid-cols-4 bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-2xl py-6 text-center gold-glow">
-                    <div class="border-r border-dark-border px-4">
-                        <p class="text-gold text-2xl font-bold"><i class="fa-solid fa-house-chimney mr-1"></i> 100%</p>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Cubierto y Seguro</p>
+    <!-- SECCIÓN DESTACADA: EVENTO VALLENATO 19 DE SEPTIEMBRE -->
+    <section id="evento" class="py-20 bg-gradient-to-b from-dark-base via-love/20 to-dark-card border-y border-love/40 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-dark-card border-2 border-gold/40 rounded-3xl p-8 md:p-12 gold-glow relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-40 h-40 bg-gold/10 rounded-full blur-2xl"></div>
+                
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 space-y-4">
+                        <span class="inline-block bg-love-light text-white text-xs font-bold uppercase px-3 py-1 rounded-full tracking-widest">
+                            🔥 Noche Central de Amor y Amistad
+                        </span>
+                        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">
+                            Sábado 19 de Septiembre
+                        </h2>
+                        <h3 class="text-xl md:text-2xl text-gold font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-music"></i> Artista de Vallenato Invitado + Conjuntos en Vivo
+                        </h3>
+                        <p class="text-gray-300 text-base leading-relaxed">
+                            Vive la parranda vallenata más grande de Sahagún en el estadero cubierto de referencia. Una noche inolvidable cargada de acordeón, el mejor sonido y un ambiente exclusivo para brindar con tus licores favoritos.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2 text-sm text-gray-300">
+                            <span><i class="fa-solid fa-clock text-gold mr-1"></i> Apertura: 8:00 PM</span>
+                            <span><i class="fa-solid fa-couch text-gold mr-1"></i> Palcos VIP y Mesas disponibles</span>
+                        </div>
                     </div>
-                    <div class="border-r border-dark-border px-4">
-                        <p class="text-gold text-2xl font-bold"><i class="fa-solid fa-star mr-1"></i> EXCLUSIVO</p>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Zonas VIP y Mesas</p>
-                    </div>
-                    <div class="border-r border-dark-border px-4">
-                        <p class="text-gold text-2xl font-bold"><i class="fa-solid fa-music mr-1"></i> RUMBA</p>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Ambiente Musical</p>
-                    </div>
-                    <div class="px-4">
-                        <p class="text-gold text-2xl font-bold"><i class="fa-solid fa-volume-high mr-1"></i> AUDIO</p>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Sonido Profesional</p>
+
+                    <div class="md:col-span-4 text-center md:text-right border-t md:border-t-0 md:border-l border-dark-border pt-6 md:pt-0 md:pl-8">
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">Cupos Limitados</p>
+                        <p class="text-2xl font-bold text-white mb-4">Asegura tu mesa desde hoy</p>
+                        <a href="#reservas" class="inline-block w-full bg-gold hover:bg-gold-hover text-dark-base font-bold py-3.5 px-6 rounded-xl transition duration-300 gold-glow text-center">
+                            <i class="fa-brands fa-whatsapp mr-2"></i> Reservar Ahora
+                        </a>
                     </div>
                 </div>
             </div>
@@ -165,28 +199,25 @@
     </section>
 
     <!-- SECCIÓN HISTORIA -->
-    <section id="historia" class="py-24 bg-dark-card border-y border-dark-border scroll-mt-20">
+    <section id="historia" class="py-24 bg-dark-card border-b border-dark-border scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Nuestros Orígenes</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-6">De un Sueño a la Grandeza</h2>
-                    <div class="w-16 h-1 bg-gold mb-6"></div>
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Tradición y Celebración</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-6">Creamos Momentos Inolvidables</h2>
+                    <div class="w-16 h-1 bg-love-light mb-6"></div>
                     
                     <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-                        Nacidos de la visión audaz de un joven emprendedor, Rincón Caribeño se propuso revolucionar por completo el concepto de los estaderos locales. Iniciamos como un proyecto humilde, pero lleno de energía y deseos de servir.
+                        En Rincón Caribeño sabemos que septiembre es un mes para reunirse. Desde nuestros inicios, nos propusimos revolucionar el concepto de los estaderos locales para ofrecer un espacio donde los grupos de amigos y las parejas se sientan especiales.
                     </p>
                     <p class="text-gray-400 mb-6 leading-relaxed">
-                        Hoy en día nos consolidamos como el estadero cubierto de referencia, un espacio diseñado para ofrecer comodidad, seguridad y la mejor experiencia festiva de la región en cada fin de semana o celebración especial.
+                        Hoy somos el estadero cubierto de referencia en Sahagún. Un espacio diseñado para ofrecer comodidad, seguridad y los mejores eventos musicales de la región para destapar regalos, brindar y disfrutar sin preocupaciones.
                     </p>
-                    <blockquote class="text-gray-300 font-semibold italic text-gold-light border-l-4 border-gold pl-4 py-2">
-                        "Nuestra gran meta es consolidarnos como el estadero cubierto más sofisticado de la región, el verdadero templo de la rumba y la buena música donde se disfruta sin restricciones."
-                    </blockquote>
                 </div>
 
                 <div class="relative">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-dark-border gold-glow">
-                        <img src="imagenes/imagen-nuestros-origenes.webp" alt="Nuestros Orígenes Rincón Caribeño" class="w-full h-full object-cover">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border-2 border-love love-glow">
+                        <img src="imagenes/imagen-nuestros-origenes.webp" alt="Amor y Amistad Rincón Caribeño" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -194,38 +225,35 @@
     </section>
 
     <!-- SECCIÓN SERVICIOS / DIFERENCIALES -->
-    <section id="servicios" class="py-24 bg-dark-base scroll-mt-20">
+    <section id="servicios" class="py-24 bg-dark-base scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">¿Por qué preferirnos?</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Experiencia &amp; Diferenciales</h2>
-                <p class="text-gray-400">Diseñado meticulosamente para garantizar que disfrutes cada momento con tus amigos o familiares con la mayor comodidad de Sahagún.</p>
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">¿Por qué elegirnos este mes?</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Experiencia VIP para tu Celebración</h2>
+                <p class="text-gray-400">Diseñado meticulosamente para garantizar que disfrutes cada brindis y cada canción con tu grupo o pareja.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Diferencial 1 -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
                         <i class="fa-solid fa-users-gear"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Atención Preferencial</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Contamos con un equipo enfocado en ofrecerte un servicio rápido y cordial para llevar tus bebidas heladas directo a la mesa sin demoras.
+                        Servicio rápido a la mesa para que no pares de celebrar. Tus botellas y cervezas siempre bien frías.
                     </p>
                 </div>
 
-                <!-- Diferencial 2 -->
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
-                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
-                        <i class="fa-solid fa-crown"></i>
+                <div class="bg-dark-card border border-love/30 p-8 rounded-2xl transition duration-300 hover:border-love-light love-glow">
+                    <div class="w-12 h-12 rounded-xl bg-love/20 flex items-center justify-center text-love-light text-2xl mb-6">
+                        <i class="fa-solid fa-couch"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Zonas VIP Exclusivas</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Áreas preferenciales y cómodos sofás con la mejor ubicación, acústica impecable y un ambiente ideal para celebraciones.
+                        Cómodos sofás ideales para reunir a todo tu grupo de amigos con excelente vista hacia los artistas.
                     </p>
                 </div>
 
-                <!-- Diferencial 3 -->
                 <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
                     <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
                         <i class="fa-solid fa-square-parking"></i>
@@ -235,45 +263,12 @@
                         Llega con total tranquilidad. Contamos con un área amplia, vigilada y segura para tu vehículo o motocicleta.
                     </p>
                 </div>
-
-                <!-- Diferencial 4 -->
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
-                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
-                        <i class="fa-solid fa-compact-disc"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Ambiente de Rumba</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        La mejor selección musical y los mejores DJ locales para garantizar una noche llena de energía y diversión.
-                    </p>
-                </div>
-
-                <!-- Diferencial 5 -->
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
-                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
-                        <i class="fa-solid fa-tags"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Precios Accesibles</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Mantenemos nuestra excelente relación calidad-precio. Licores selectos y combos de cerveza ajustados al bolsillo de todos.
-                    </p>
-                </div>
-
-                <!-- Diferencial 6 -->
-                <div class="bg-dark-card border border-dark-border p-8 rounded-2xl transition duration-300 gold-glow-hover">
-                    <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Eventos Privados</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        ¿Quieres festejar un cumpleaños o reunión empresarial? Adaptamos nuestros espacios para tus celebraciones especiales.
-                    </p>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN CARTA DE BEBIDAS -->
-    <section id="carta" class="py-24 bg-dark-card border-y border-dark-border scroll-mt-20">
+    <!-- SECCIÓN CARTA DE BEBIDAS ORIGINAL -->
+    <section id="carta" class="py-24 bg-dark-card border-y border-dark-border scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">El Menú Oficial</span>
@@ -409,50 +404,74 @@
     </section>
 
     <!-- FORMULARIO DE RESERVA INTERACTIVO -->
-    <section id="reservas" class="py-24 bg-dark-base scroll-mt-20">
+    <section id="reservas" class="py-24 bg-dark-base scroll-mt-24">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
-                <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Reserva Online</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Asegura tu Mesa</h2>
-                <p class="text-gray-400">Completa tus datos para agendar tu espacio de forma directa.</p>
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-love-light">Asegura tu espacio</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Reserva tu Celebración</h2>
+                <p class="text-gray-400">Los cupos para el evento del 19 de Septiembre son limitados.</p>
             </div>
 
-            <div class="bg-dark-card border border-dark-border p-8 md:p-12 rounded-3xl gold-glow">
+            <div class="bg-dark-card border border-love/50 p-8 md:p-12 rounded-3xl love-glow">
                 <form id="reservaForm" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="nombre">Nombre Completo *</label>
-                            <input type="text" id="nombre" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. Juan Pérez">
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="nombre">A nombre de quién *</label>
+                            <input type="text" id="nombre" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-love-light transition duration-300" placeholder="Ej. Juan Pérez">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="telefono">Número de Teléfono *</label>
-                            <input type="tel" id="telefono" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300" placeholder="Ej. 3001234567">
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="telefono">Número de WhatsApp *</label>
+                            <input type="tel" id="telefono" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-love-light transition duration-300" placeholder="Ej. 3001234567">
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="fecha">Fecha de Visita *</label>
-                            <input type="date" id="fecha" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300">
+                            <input type="date" id="fecha" value="2026-09-19" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-love-light transition duration-300">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="zona">Ubicación Solicitada *</label>
-                            <select id="zona" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition duration-300">
+                            <select id="zona" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-love-light transition duration-300">
                                 <option value="Palco VIP / Sofás">Palco VIP - Sofás preferenciales</option>
                                 <option value="Zona General">Zona General - Mesas centrales</option>
                             </select>
                         </div>
                     </div>
 
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2" for="motivo">Motivo de la Reserva *</label>
+                        <select id="motivo" required class="w-full bg-dark-base border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-love-light transition duration-300">
+                            <option value="Gran Show Vallenato (19 Sep)" selected>🎤 Gran Show Vallenato de Amor y Amistad (19 Sep)</option>
+                            <option value="Juego Amigo Secreto (Grupo)">Juego Amigo Secreto (Grupo)</option>
+                            <option value="Celebración en Pareja">Celebración en Pareja</option>
+                            <option value="Grupo de Amigos">Reunión Grupo de Amigos</option>
+                            <option value="Otro">Otro motivo</option>
+                        </select>
+                    </div>
+
                     <div class="pt-4">
                         <button type="submit" class="w-full bg-gold hover:bg-gold-hover text-dark-base font-bold py-4 rounded-xl text-center transition duration-300 flex items-center justify-center gap-3 shadow-lg">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Reserva por WhatsApp
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Solicitud por WhatsApp
                         </button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- FOOTER / PIE DE PÁGINA -->
+    <footer class="bg-dark-card border-t border-dark-border py-12 text-center text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-6 space-y-6">
+            <div class="flex justify-center space-x-6 text-gold text-xl">
+                <a href="#" class="hover:text-gold-light transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold-light transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/573016976997" target="_blank" class="hover:text-gold-light transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p><i class="fa-solid fa-location-dot text-gold mr-1"></i> Sahagún, Córdoba - Colombia</p>
+            <p class="text-xs text-gray-500">&copy; 2026 Rincón Caribeño. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <!-- SCRIPTS INTERACTIVOS -->
     <script>
@@ -462,11 +481,9 @@
 
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.className = 'fa-solid fa-bars';
-            } else {
-                menuIcon.className = 'fa-solid fa-xmark';
-            }
+            menuIcon.className = mobileMenu.classList.contains('hidden') 
+                ? 'fa-solid fa-bars' 
+                : 'fa-solid fa-xmark';
         });
 
         document.querySelectorAll('.mobile-link').forEach(link => {
@@ -476,6 +493,14 @@
             });
         });
 
+        // Configurar la fecha mínima
+        const fechaInput = document.getElementById('fecha');
+        if (fechaInput) {
+            const hoy = new Date().toISOString().split('T')[0];
+            fechaInput.setAttribute('min', hoy);
+        }
+
+        // Script de envío a WhatsApp
         document.getElementById('reservaForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -483,9 +508,10 @@
             const telefono = document.getElementById('telefono').value;
             const fecha = document.getElementById('fecha').value;
             const zona = document.getElementById('zona').value;
+            const motivo = document.getElementById('motivo').value;
             
             const numeroWhatsApp = "573016976997";
-            const mensaje = `Hola, quiero solicitar una reserva en Rincón Caribeño.%0A%0A*Nombre:* ${nombre}%0A*Teléfono:* ${telefono}%0A*Fecha:* ${fecha}%0A*Ubicación:* ${zona}`;
+            const mensaje = `🎤 Hola, quiero reservar mesa en Rincón Caribeño.%0A%0A*Nombre:* ${nombre}%0A*Teléfono:* ${telefono}%0A*Fecha:* ${fecha}%0A*Ubicación:* ${zona}%0A*Motivo / Evento:* ${motivo}`;
             
             window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
         });
